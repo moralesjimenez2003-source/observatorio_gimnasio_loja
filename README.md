@@ -32,3 +32,10 @@ Abrir el cuaderno en Google Colab y usar *Entorno de ejecución > Reiniciar sesi
 
 ## Declaración de uso de IA
 Utilicé ChatGPT como herramienta de IA generativa para organizar la pregunta de negocio, proponer indicadores y redactar el README. Verificaré los precios y las promociones mediante las fuentes originales antes de utilizarlos en el análisis.
+
+## Supuestos y limitaciones
+- Supuesto 1 es que los cuatro gimnasios competidores del centro de Loja mantienen información sobre sus precios y promociones en redes sociales, sitios web u otros canales de comunicación, permitiendo recopilar y actualizar estos datos mensualmente.
+- Supuesto 2 es que que las membresías mensuales de los gimnasios seleccionados ofrecen servicios y condiciones relativamente similares, facilitando la comparación de precios y la identificación de diferencias competitivas.
+- Limitación es la información de algunos gimnasios puede ser incompleta o estar desactualizada, debido a que no todos publican sus precios y promociones en medios digitales o actualizan oportunamente sus canales de comunicación.
+¿Por qué importa para el decisor?
+Esta información es importante para el gerente comercial porque le permitirá evaluar la competitividad de los precios de su gimnasio y establecer promociones adecuadas para atraer nuevos clientes. No obstante, deberá verificar los datos recopilados antes de modificar sus precios o implementar estrategias comerciales, evitando tomar decisiones basadas en información incompleta o desactualizada.
