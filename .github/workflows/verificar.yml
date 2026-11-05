@@ -1,0 +1,35 @@
+# Revisor robot del Observatorio (integración continua). NO es necesario modificar este archivo.
+# Se ejecuta solo cada vez que alguien guarda un cambio o abre un pull request, y revisa:
+#   1. que el README tenga las cuatro secciones de negocio;
+#   2. que no queden campos de la plantilla sin completar ("...");
+#   3. que no se hayan publicado correos electrónicos de personas (LOPDP).
+name: Verificar observatorio
+on: [push, pull_request]
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Control de calidad del README
+        shell: python
+        run: |
+          import glob, re, sys
+          secciones = ["## Pregunta de negocio", "## Quién decide y qué decisión apoya",
+                       "## Indicadores", "## Fuentes previstas"]
+          vacio = re.compile(r"^\s*(?:#\s*Observatorio de|-\s*(?:\*\*[^*]+\*\*\s*)?|¿)?\s*\.\.\.\s*\??\s*$")
+          lineas = open("README.md", encoding="utf-8").read().splitlines()
+          texto = "\n".join(lineas)
+          errores = [f"Falta la sección '{s}' (revise que el título esté escrito igual)." for s in secciones if s not in texto]
+          errores += [f"Línea {n}: campo sin completar -> '{l.strip()}'" for n, l in enumerate(lineas, 1)
+                      if vacio.match(l) or l.strip().startswith("... ")]
+          for ruta in glob.glob("**/*.md", recursive=True) + glob.glob("**/*.csv", recursive=True):
+              if ".github" in ruta:
+                  continue
+              if re.search(r"[\w.-]+@[\w-]+\.[a-z]{2,}", open(ruta, encoding="utf-8").read()):
+                  errores.append(f"{ruta}: contiene un correo electrónico (dato personal, LOPDP).")
+          if errores:
+              print("❌ El revisor encontró problemas:")
+              for e in errores:
+                  print("  -", e)
+              sys.exit(1)
+          print("✅ Aprobado: README completo y sin datos personales.")

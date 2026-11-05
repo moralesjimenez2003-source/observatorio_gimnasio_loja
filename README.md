@@ -1,0 +1,19 @@
+# Observatorio de ...
+
+... Proyecto integrador de Programación Aplicada a la Inteligencia de Mercados (UIDE Loja).
+
+## Pregunta de negocio
+¿...?
+
+## Quién decide y qué decisión apoya
+- **Quién decide:** ...
+- **Decisión:** ...
+
+## Indicadores
+- ...
+
+## Fuentes previstas
+- ...
+
+## Declaración de uso de IA
+...
