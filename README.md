@@ -60,5 +60,5 @@ Se usan únicamente datos públicos o proporcionados por los propios establecimi
 Abrir el cuaderno en Google Colab y usar **Entorno de ejecución > Reiniciar sesión y ejecutar todo**.
 
 ## Declaración de uso de IA
+Utilicé ChatGPT como herramienta de IA generativa para organizar la pregunta de negocio, proponer indicadores y redactar el README. Verificaré los precios y las promociones mediante las fuentes originales antes de utilizarlos en el análisis.
 
-Utilicé ChatGPT como herramienta de IA generativa para organizar la pregunta de negocio, proponer indicadores y redactar el README. Utilicé Claude para aplicar las correcciones de mi compañero a las secciones de supuestos, limitaciones y jerarquía de títulos. Verificaré los precios y las promociones mediante las fuentes originales antes de utilizarlos en el análisis.
